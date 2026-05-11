@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   const whatsappUrl = "https://wa.me/2347075027638";
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white py-[100px]">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white py-25">
       {/* 1. The Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -17,8 +17,8 @@ const Hero: React.FC = () => {
       </div>
 
       {/* 2. The Overlay - Blending Image into the White Design */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-white/90 via-white/40 to-white"></div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-white via-white/20 to-transparent hidden md:block"></div>
+      <div className="absolute inset-0 z-10 bg-linear-to-b from-white/90 via-white/40 to-white"></div>
+      <div className="absolute inset-0 z-10 bg-linear-to-r from-white via-white/20 to-transparent hidden md:block"></div>
 
       {/* 3. The Content Layer */}
       <div className="container mx-auto px-6 relative z-20">
