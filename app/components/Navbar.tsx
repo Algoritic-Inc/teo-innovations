@@ -21,6 +21,8 @@ const Navbar: React.FC = () => {
     { name: "Telecomm", href: "#utility" },
   ];
 
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <nav
       className={`fixed shadow-xl top-0 w-full z-[100] transition-all duration-500 ${
@@ -60,7 +62,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/2347075027638"
+            href="https://wa.me/2349038963786"
             className="flex items-center space-x-2 px-6 py-3 bg-slate-900 hover:bg-blue-600 text-white text-sm font-bold rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-xl shadow-slate-200"
           >
             <MessageSquare className="w-4 h-4" />
@@ -81,26 +83,68 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Sidebar */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 p-8 space-y-6 shadow-2xl animate-in fade-in slide-in-from-top-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block text-2xl font-black text-slate-900 hover:text-blue-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="https://wa.me/2347075027638"
-            className="block w-full py-5 bg-blue-600 text-center text-white font-bold rounded-2xl shadow-lg shadow-blue-100"
-          >
-            Send WhatsApp Message
-          </a>
-        </div>
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            onClick={closeMobileMenu}
+          ></div>
+
+          {/* Sidebar */}
+          <div className="fixed left-0 top-0 h-screen w-64 bg-white z-50 md:hidden flex flex-col animate-in slide-in-from-left-full duration-300">
+            {/* Sidebar Header */}
+            <div className="flex items-center justify-between p-6 border-b border-slate-100">
+              <a href="#" className="flex items-center space-x-2 group" onClick={closeMobileMenu}>
+                <div className="w-10 h-10 bg-slate-900 group-hover:bg-blue-600 rounded-xl flex items-center justify-center transition-colors duration-300 shadow-lg shadow-slate-200">
+                  <span className="text-white font-black text-xl">T</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-black text-lg tracking-tighter leading-none text-slate-900">
+                    TEO<span className="text-blue-600">INNOVATIONS</span>
+                  </span>
+                  <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                    LTD
+                  </span>
+                </div>
+              </a>
+              <button
+                onClick={closeMobileMenu}
+                className="text-slate-900 hover:text-blue-600 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Sidebar Navigation */}
+            <div className="flex-1 flex flex-col space-y-4 p-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors duration-200 relative group"
+                  onClick={closeMobileMenu}
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+            </div>
+
+            {/* Sidebar Footer */}
+            <div className="p-6 border-t border-slate-100">
+              <a
+                href="https://wa.me/2349038963786"
+                className="flex items-center justify-center space-x-2 w-full px-6 py-3 bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-xl shadow-slate-200"
+                onClick={closeMobileMenu}
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>Contact Now</span>
+              </a>
+            </div>
+          </div>
+        </>
       )}
     </nav>
   );

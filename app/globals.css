@@ -22,7 +22,24 @@ body {
     radial-gradient(circle at 75% 20%, rgba(140, 185, 255, 0.12), transparent 22%),
     linear-gradient(180deg, #eaf6ff 0%, #f6fbff 40%, #ffffff 100%);
   color: var(--foreground);
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Avenir Next", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), var(--font-body), "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 ::selection {

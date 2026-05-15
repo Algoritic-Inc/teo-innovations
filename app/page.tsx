@@ -87,7 +87,7 @@ const process = [
   },
 ];
 
-const whatsappCatalogueUrl = "https://wa.me/?text=Hi%20Teo%20Innoation%2C%20please%20share%20your%20catalogue%20and%20current%20prices.";
+const whatsappCatalogueUrl = "https://wa.me/2349038963786?text=Hi%20Teo%20Innoation%2C%20please%20share%20your%20catalogue%20and%20current%20prices.";
 
 function SectionHeading({
   eyebrow,
@@ -152,9 +152,9 @@ function ProjectCard({
       <div className="p-5">
         <div className="flex items-center justify-between gap-3">
           <h3 className="text-lg font-semibold text-slate-950">{title}</h3>
-          <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">
+          {/* <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">
             {result}
-          </span>
+          </span> */}
         </div>
         <p className="mt-3 text-sm leading-7 text-slate-600">{copy}</p>
         <div className="mt-4 flex flex-wrap gap-3">
@@ -165,12 +165,6 @@ function ProjectCard({
             className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
           >
             Shop on WhatsApp
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-          >
-            Contact to order
           </a>
         </div>
       </div>
@@ -193,14 +187,12 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#top" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-white shadow-lg shadow-slate-950/15">
-              T
-            </div>
+            
             <div className="leading-tight">
-              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-slate-500">
-                Teo Innoation
+              <p className="text-md font-semibold uppercase tracking-[0.26em] text-slate-500">
+                Teo Innovation
               </p>
-              <p className="text-base font-semibold text-slate-950">
+              <p className="text-base text-sm font-semibold text-slate-950">
                 Gadgets, accessories, swap & repair
               </p>
             </div>
@@ -265,10 +257,7 @@ export default function Home() {
       <section id="top" className="mx-auto w-full max-w-7xl px-4 pb-14 pt-12 sm:px-6 lg:px-8 lg:pb-20 lg:pt-18">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-sky-700 shadow-sm">
-              <Sparkles className="h-4 w-4" />
-              Teo Innoation
-            </div>
+            
 
             <h1
               className="mt-6 text-5xl font-semibold tracking-tighter text-slate-950 sm:text-6xl lg:text-7xl"
@@ -506,7 +495,7 @@ export default function Home() {
       <footer className="mx-auto w-full max-w-7xl px-4 pb-10 pt-6 sm:px-6 lg:px-8">
         <div className="border-t border-slate-200 pt-6 text-sm text-slate-500 sm:flex sm:items-center sm:justify-between">
           <p>© 2026 Teo Innoation.</p>
-          <div className="mt-3 flex items-center gap-4 sm:mt-0">
+          <div className="mt-3 flex justify-center items-center gap-4 sm:mt-0">
             <a href="#shop" className="transition hover:text-slate-950">Shop</a>
             <a href="#contact" className="transition hover:text-slate-950">Contact</a>
             <a href="mailto:hello@teoinnoation.com" className="transition hover:text-slate-950">

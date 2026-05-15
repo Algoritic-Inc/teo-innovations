@@ -18,7 +18,7 @@ const CTA: React.FC = () => {
               choice.
             </p>
             <a
-              href="https://wa.me/2347075027638"
+              href="https://wa.me/2349038963786"
               className="inline-flex items-center space-x-3 px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all hover:scale-105 shadow-xl shadow-blue-600/20"
             >
               <span>Chat with us on WhatsApp</span>

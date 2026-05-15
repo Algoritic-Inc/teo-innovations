@@ -3,7 +3,7 @@ import React from "react";
 import { ArrowRight, Smartphone, Video, Settings } from "lucide-react";
 
 const Hero: React.FC = () => {
-  const whatsappUrl = "https://wa.me/2347075027638";
+  const whatsappUrl = "https://wa.me/2349038963786";
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white py-25">
